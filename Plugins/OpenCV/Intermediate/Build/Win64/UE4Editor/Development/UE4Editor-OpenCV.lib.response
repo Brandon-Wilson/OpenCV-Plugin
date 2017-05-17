@@ -1,0 +1,23 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-OpenCV.dll"
+/IGNORE:4221
+/LIBPATH:"C:\Users\brand\Desktop\OpenCVPluginTest\ThirdParty\OpenCV\Libraries\Win64"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Development\OpenCV\Module.OpenCV.cpp.obj"
+"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Development\OpenCV\OpenCV.generated.cpp.obj"
+"F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\OpenCV\PCLaunch.rc.res"
+"F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-OpenCV.lib"

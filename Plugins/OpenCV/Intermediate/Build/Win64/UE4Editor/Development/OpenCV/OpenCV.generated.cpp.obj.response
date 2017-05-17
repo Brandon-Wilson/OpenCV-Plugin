@@ -1,0 +1,431 @@
+/Zc:inline
+/nologo
+/Oi
+/c
+/Gy
+/Zm850
+/wd4819
+/D_CRT_STDIO_LEGACY_WIDE_SPECIFIERS=1
+/D_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS=1
+/D_WINDLL
+/Ox
+/Ot
+/Ob2
+/errorReport:prompt
+/EHsc
+/MD
+/bigobj
+/fp:fast
+/Zo
+/Zp8
+/wd4463
+/wd4838
+/w44668
+/I "F:\Epic Games\UE_4.15\Engine\Source"
+/I C:\Users\brand\Desktop\OpenCVPluginTest\ThirdParty\OpenCV\Includes
+/I C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Source
+/I C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Source\OpenCV\Public
+/I C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Inc\OpenCV
+/I C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Source\OpenCV
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Internationalization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Async"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Containers"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Delegates"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\GenericPlatform"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\HAL"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Logging"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Math"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Misc"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Modules"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Modules\Boilerplate"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\ProfilingDebugging"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Serialization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Serialization\Csv"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Stats"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Templates"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\UObject"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core\Public\Windows"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Core"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\RHI\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\RHI"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\RenderCore\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\RenderCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\Blueprint"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\Internationalization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\Misc"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\Serialization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\Templates"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject\Public\UObject"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\CoreUObject"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\AI"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\AI\Navigation"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Animation"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Curves"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\EdGraph"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Features"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Internationalization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Net"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\PacketHandlers"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Performance"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Physics"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Rendering"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Slate"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\Tests"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine\Public\VisualLogger"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Engine"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Json\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Json\Public\Dom"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Json\Public\Policies"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Json\Public\Serialization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Json"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Animation"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Application"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Brushes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Fonts"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Input"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Layout"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Logging"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Rendering"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Sound"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Stats"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Styling"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Textures"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Types"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore\Public\Widgets"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SlateCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\InputCore\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\InputCore\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\InputCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\InputCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Application"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Commands"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Docking"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Layout"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\MetaData"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\MultiBox"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Notifications"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Styling"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Text"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Text\Android"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Text\IOS"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Framework\Views"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Colors"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Docking"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Images"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Input"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\LayerManager"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Layout"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Navigation"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Notifications"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Text"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate\Public\Widgets\Views"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Slate"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Messaging\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Messaging\Public\Deprecated"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Messaging\Public\Helpers"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Messaging"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\ShaderCore\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\ShaderCore"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AssetRegistry\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AssetRegistry"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\EngineMessages\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineMessages"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\EngineMessages"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\EngineSettings\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\EngineSettings\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EngineSettings"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\EngineSettings"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SynthBenchmark\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SynthBenchmark"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Renderer\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Renderer"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTags\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTags\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTags"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AIModule\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AIModule\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AIModule"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTasks\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTasks\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTasks"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\GameplayTasks"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\DatabaseSupport\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\DatabaseSupport"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\PacketHandlers\PacketHandler\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\PacketHandlers\PacketHandler\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\PacketHandler"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\PacketHandlers\PacketHandler"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\PacketHandlers\ReliabilityHandlerComponent"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\HardwareSurvey\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\HardwareSurvey"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Programs\UnrealLightmass\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\AutoReimport"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Commandlets"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Dialogs"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\DragAndDrop"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Features"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Kismet2"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Layers"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Localization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Settings"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Tests"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd\Public\Toolkits"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEd"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEd"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\BspMode\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\BspMode"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\DirectoryWatcher\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\DirectoryWatcher"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Documentation\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Documentation"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Projects\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Projects\Public\Interfaces"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Projects"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SandboxFile\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\SandboxFile"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\EditorStyle\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\EditorStyle\Public\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\EditorStyle\Public\Interfaces"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\EditorStyle"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\EditorStyle"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\SourceControl\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\SourceControl\Public\Tests"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\SourceControl"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEdMessages\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEdMessages\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UnrealEdMessages"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UnrealEdMessages"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\GameplayDebugger\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GameplayDebugger"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\GameplayDebugger"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\BlueprintGraph\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\BlueprintGraph\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\BlueprintGraph"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\BlueprintGraph"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\Android"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\Apple"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\GenericPlatform"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\HTML5"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\Interfaces"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\Linux"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP\Public\Windows"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Online\HTTP"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\UnrealAudio\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\UnrealAudio"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\FunctionalTesting\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\FunctionalTesting\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\FunctionalTesting"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\FunctionalTesting"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\AutomationController\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\AutomationController\Public\Interfaces"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AutomationController"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\AutomationController"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Internationalization\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Internationalization\Public\Serialization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Internationalization"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\AudioEditor\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\AudioEditor\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AudioEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\AudioEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\LevelEditor\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\LevelEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\Settings\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\Settings"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UserFeedback\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\UserFeedback"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\IntroTutorials\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\IntroTutorials"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\IntroTutorials"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\HeadMountedDisplay\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\HeadMountedDisplay"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\VREditor\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\VREditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\VREditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Landscape\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Landscape\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Landscape"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Landscape"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\PropertyEditor\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\PropertyEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ActorPickerMode\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ActorPickerMode"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\SceneDepthPickerMode\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\SceneDepthPickerMode"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\DetailCustomizations\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\DetailCustomizations\Public\Customizations"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\DetailCustomizations"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ClassViewer\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ClassViewer"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ClassViewer"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\GraphEditor\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\GraphEditor\Public\KismetNodes"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\GraphEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\GraphEditor"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ContentBrowser\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\ContentBrowser"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\ContentBrowser"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Windows\XAudio2\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Windows\XAudio2"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\AudioMixer\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Windows\AudioMixerXAudio2"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\Windows\UnrealAudioXAudio2"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\CollectionManager\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\CollectionManager"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\AddContentDialog\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AddContentDialog"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\AddContentDialog"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\MeshUtilities\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Developer\MeshUtilities"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet\Classes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet\Public\Nodes"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet\Public\Profiler"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp"
+/I "F:\Epic Games\UE_4.15\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Kismet"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Editor\Kismet"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public"
+/I "F:\Epic Games\UE_4.15\Engine\Source\Runtime\NetworkReplayStreaming\NetworkReplayStreaming"
+/DUE_EDITOR=1
+/DIS_PROGRAM=0
+/DWITH_DEV_AUTOMATION_TESTS=1
+/DWITH_PERF_AUTOMATION_TESTS=1
+/DUNICODE
+/D_UNICODE
+/D__UNREAL__
+/DIS_MONOLITHIC=0
+/DWITH_ENGINE=1
+/DWITH_UNREAL_DEVELOPER_TOOLS=1
+/DWITH_COREUOBJECT=1
+/DUSE_STATS_WITHOUT_ENGINE=0
+/DWITH_PLUGIN_SUPPORT=0
+/DWITH_PERFCOUNTERS=1
+/DUSE_LOGGING_IN_SHIPPING=0
+/DWITH_LOGGING_TO_MEMORY=0
+/DUSE_CHECKS_IN_SHIPPING=0
+/DUE_BUILD_MINIMAL=0
+/DWITH_EDITOR=1
+/DWITH_SERVER_CODE=1
+/DWITH_CEF3=1
+/DUBT_COMPILED_PLATFORM=Win64
+/DUBT_COMPILED_TARGET=Editor
+/DWIN32=1
+/D_WIN32_WINNT=0x0601
+/DWINVER=0x0601
+/DPLATFORM_WINDOWS=1
+/DDEPTH_32_BIT_CONVERSION=0
+/DNDEBUG=1
+/DUE_BUILD_DEVELOPMENT=1
+/DORIGINAL_FILE_NAME=\"UE4Editor-OpenCV.dll\"
+/DUE_IS_ENGINE_MODULE=0
+/DUE_BUILD_DEVELOPMENT_WITH_DEBUGGAME=0
+/DWITH_OPENCV_BINDING=1
+/DDEPRECATED_FORGAME=DEPRECATED
+/DWITH_OPENCV_BINDING=1
+/DOPENCV_API=DLLEXPORT
+/DUE_ENABLE_ICU=1
+/DWITH_VS_PERF_PROFILER=0
+/DWITH_DIRECTXMATH=0
+/DCORE_API=DLLIMPORT
+/DRHI_API=DLLIMPORT
+/DRENDERCORE_API=DLLIMPORT
+/DCOREUOBJECT_API=DLLIMPORT
+/DWITH_PHYSX=1
+/DWITH_APEX=1
+/DWITH_RUNTIME_PHYSICS_COOKING=1
+/DWITH_BOX2D=1
+/DWITH_RECAST=1
+/DENGINE_API=DLLIMPORT
+/DJSON_API=DLLIMPORT
+/DWITH_FREETYPE=1
+/DSLATECORE_API=DLLIMPORT
+/DINPUTCORE_API=DLLIMPORT
+/DSLATE_API=DLLIMPORT
+/DMESSAGING_API=DLLIMPORT
+/DSHADERCORE_API=DLLIMPORT
+/DASSETREGISTRY_API=DLLIMPORT
+/DENGINEMESSAGES_API=DLLIMPORT
+/DENGINESETTINGS_API=DLLIMPORT
+/DSYNTHBENCHMARK_API=DLLIMPORT
+/DRENDERER_API=
+/DGAMEPLAYTAGS_API=DLLIMPORT
+/DWITH_RECAST=1
+/DWITH_GAMEPLAY_DEBUGGER=1
+/DAIMODULE_API=DLLIMPORT
+/DGAMEPLAYTASKS_API=DLLIMPORT
+/DDATABASESUPPORT_API=DLLIMPORT
+/DPACKETHANDLER_API=DLLIMPORT
+/DRELIABILITYHANDLERCOMPONENT_API=DLLIMPORT
+/DHARDWARESURVEY_API=DLLIMPORT
+/DWITH_PHYSX=1
+/DWITH_APEX=1
+/DWITH_RUNTIME_PHYSICS_COOKING=1
+/DWITH_RECAST=1
+/DUNREALED_API=DLLIMPORT
+/DBSPMODE_API=DLLIMPORT
+/DDIRECTORYWATCHER_API=DLLIMPORT
+/DDOCUMENTATION_API=DLLIMPORT
+/DPROJECTS_API=DLLIMPORT
+/DSANDBOXFILE_API=DLLIMPORT
+/DEDITORSTYLE_API=DLLIMPORT
+/DSOURCECONTROL_API=DLLIMPORT
+/DUNREALEDMESSAGES_API=DLLIMPORT
+/DGAMEPLAYDEBUGGER_API=DLLIMPORT
+/DBLUEPRINTGRAPH_API=DLLIMPORT
+/DHTTP_PACKAGE=1
+/DHTTP_API=DLLIMPORT
+/DUNREALAUDIO_API=DLLIMPORT
+/DFUNCTIONALTESTING_API=DLLIMPORT
+/DAUTOMATIONCONTROLLER_API=DLLIMPORT
+/DINTERNATIONALIZATION_API=DLLIMPORT
+/DAUDIOEDITOR_API=DLLIMPORT
+/DLEVELEDITOR_API=DLLIMPORT
+/DSETTINGS_API=
+/DUSERFEEDBACK_API=
+/DINTROTUTORIALS_API=
+/DHEADMOUNTEDDISPLAY_API=
+/DVREDITOR_API=
+/DWITH_PHYSX=1
+/DWITH_APEX=1
+/DWITH_RUNTIME_PHYSICS_COOKING=1
+/DLANDSCAPE_API=DLLIMPORT
+/DPROPERTYEDITOR_API=DLLIMPORT
+/DACTORPICKERMODE_API=DLLIMPORT
+/DSCENEDEPTHPICKERMODE_API=DLLIMPORT
+/DDETAILCUSTOMIZATIONS_API=DLLIMPORT
+/DCLASSVIEWER_API=DLLIMPORT
+/DGRAPHEDITOR_API=DLLIMPORT
+/DCONTENTBROWSER_API=DLLIMPORT
+/DWITH_OGGVORBIS=1
+/DXAUDIO2_API=DLLIMPORT
+/DAUDIOMIXERXAUDIO2_API=DLLIMPORT
+/DUNREALAUDIOXAUDIO2_API=DLLIMPORT
+/DCOLLECTIONMANAGER_API=
+/DADDCONTENTDIALOG_API=
+/DMESHUTILITIES_API=
+/DKISMET_API=DLLIMPORT
+/DNETWORKREPLAYSTREAMING_API=
+"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Inc\OpenCV\OpenCV.generated.cpp"
+/Fo"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Development\OpenCV\OpenCV.generated.cpp.obj"
+/Fd"C:\Users\brand\Desktop\OpenCVPluginTest\Plugins\OpenCV\Intermediate\Build\Win64\UE4Editor\Development\OpenCV\OpenCV.generated.cpp.pdb"
+/TP
+/GR-
+/W4
