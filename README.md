@@ -12,6 +12,8 @@ You have a couple options for installation:
 * Copy and merge all folders into an existing project's root directory.  This project will need source code so that it looks in the binaries folder for the OpenCV libraries. If you don't have any source code, open the editor and add c++ source in the file menu.
 
 * Alternatively, you could add the binaries to the system's path variable, or add them directly to the engine's binaries folder. (this isn't recommended)
+
+Afterwards, be sure to regenerate project files. For visual studios, right click your project (.uasset) file and select 'generate visual studio project files' after deleting your previous visual studios file.
  
 Usage
 -----
