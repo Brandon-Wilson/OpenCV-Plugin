@@ -10,7 +10,7 @@ public class OpenCV : ModuleRules
         get { return Path.GetFullPath(Path.Combine(ModuleDirectory, "../../../../ThirdParty/")); }
     }
 
-	public OpenCV(TargetInfo Target)
+	public OpenCV(ReadOnlyTargetRules Target) : base(Target)
 	{
         // Startard Module Dependencies
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "RHI", "RenderCore" });
@@ -24,7 +24,7 @@ public class OpenCV : ModuleRules
 
         // Get Library Path 
         string LibPath = "";
-        bool isdebug = Target.Configuration == UnrealTargetConfiguration.Debug && BuildConfiguration.bDebugBuildsActuallyUseDebugCRT;
+        bool isdebug = Target.Configuration == UnrealTargetConfiguration.Debug && Target.bDebugBuildsActuallyUseDebugCRT;
         if (Target.Platform == UnrealTargetPlatform.Win64)
         {
             LibPath = Path.Combine(OpenCVPath, "Libraries", "Win64");

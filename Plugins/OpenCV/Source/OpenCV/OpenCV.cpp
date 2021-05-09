@@ -1,5 +1,6 @@
 // Some copyright should be here...
 
+#include "OpenCV.h"
 #include "OpenCVPrivatePCH.h"
 
 
