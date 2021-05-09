@@ -1,15 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
- 
+
 #include "OpenCVPrivatePCH.h"
 #include "OpenCV.h"
 #include "WebcamReader.h"
- 
+#include <Rendering/Texture2DResource.h>
+
 // Sets default values
 AWebcamReader::AWebcamReader()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
- 
+
 	// Initialize OpenCV and webcam properties
 	CameraID = 0;
 	RefreshRate = 15;
@@ -21,12 +22,12 @@ AWebcamReader::AWebcamReader()
 	stream = cv::VideoCapture();
 	frame = cv::Mat();
 }
- 
+
 // Called when the game starts or when spawned
 void AWebcamReader::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 	// Open the stream
 	stream.open(CameraID);
 	if (stream.isOpened())
@@ -39,7 +40,7 @@ void AWebcamReader::BeginPlay()
 		VideoTexture = UTexture2D::CreateTransient(VideoSize.X, VideoSize.Y);
 		VideoTexture->UpdateResource();
 		VideoUpdateTextureRegion = new FUpdateTextureRegion2D(0, 0, 0, 0, VideoSize.X, VideoSize.Y);
- 
+
 		// Initialize data array
 		Data.Init(FColor(0, 0, 0, 255), VideoSize.X * VideoSize.Y);
 
@@ -48,14 +49,14 @@ void AWebcamReader::BeginPlay()
 		UpdateTexture();
 		OnNextVideoFrame();
 	}
- 
+
 }
- 
+
 // Called every frame
-void AWebcamReader::Tick( float DeltaTime )
+void AWebcamReader::Tick(float DeltaTime)
 {
-	Super::Tick( DeltaTime );
- 
+	Super::Tick(DeltaTime);
+
 	RefreshTimer += DeltaTime;
 	if (isStreamOpen && RefreshTimer >= 1.0f / RefreshRate)
 	{
@@ -66,7 +67,7 @@ void AWebcamReader::Tick( float DeltaTime )
 		OnNextVideoFrame();
 	}
 }
- 
+
 void AWebcamReader::UpdateFrame()
 {
 	if (stream.isOpened())
@@ -86,7 +87,7 @@ void AWebcamReader::DoProcessing()
 {
 
 }
- 
+
 void AWebcamReader::UpdateTexture()
 {
 	if (isStreamOpen && frame.data)
@@ -102,12 +103,12 @@ void AWebcamReader::UpdateTexture()
 				Data[i].R = frame.data[i * 3 + 2];
 			}
 		}
- 
+
 		// Update texture 2D
 		UpdateTextureRegions(VideoTexture, (int32)0, (uint32)1, VideoUpdateTextureRegion, (uint32)(4 * VideoSize.X), (uint32)4, (uint8*)Data.GetData(), false);
 	}
 }
- 
+
 void AWebcamReader::UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, uint32 NumRegions, FUpdateTextureRegion2D* Regions, uint32 SrcPitch, uint32 SrcBpp, uint8* SrcData, bool bFreeData)
 {
 	if (Texture->Resource)
@@ -122,9 +123,9 @@ void AWebcamReader::UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, ui
 			uint32 SrcBpp;
 			uint8* SrcData;
 		};
- 
+
 		FUpdateTextureRegionsData* RegionData = new FUpdateTextureRegionsData;
- 
+
 		RegionData->Texture2DResource = (FTexture2DResource*)Texture->Resource;
 		RegionData->MipIndex = MipIndex;
 		RegionData->NumRegions = NumRegions;
@@ -132,34 +133,32 @@ void AWebcamReader::UpdateTextureRegions(UTexture2D* Texture, int32 MipIndex, ui
 		RegionData->SrcPitch = SrcPitch;
 		RegionData->SrcBpp = SrcBpp;
 		RegionData->SrcData = SrcData;
- 
-		ENQUEUE_UNIQUE_RENDER_COMMAND_TWOPARAMETER(
-			UpdateTextureRegionsData,
-			FUpdateTextureRegionsData*, RegionData, RegionData,
-			bool, bFreeData, bFreeData,
+
+		ENQUEUE_RENDER_COMMAND(UpdateTextureRegionsData)(
+			[RegionData, bFreeData](FRHICommandListImmediate& RHICmdList)
 			{
-			for (uint32 RegionIndex = 0; RegionIndex < RegionData->NumRegions; ++RegionIndex)
-			{
-				int32 CurrentFirstMip = RegionData->Texture2DResource->GetCurrentFirstMip();
-				if (RegionData->MipIndex >= CurrentFirstMip)
+				for (uint32 RegionIndex = 0; RegionIndex < RegionData->NumRegions; ++RegionIndex)
 				{
-					RHIUpdateTexture2D(
-						RegionData->Texture2DResource->GetTexture2DRHI(),
-						RegionData->MipIndex - CurrentFirstMip,
-						RegionData->Regions[RegionIndex],
-						RegionData->SrcPitch,
-						RegionData->SrcData
-						+ RegionData->Regions[RegionIndex].SrcY * RegionData->SrcPitch
-						+ RegionData->Regions[RegionIndex].SrcX * RegionData->SrcBpp
+					int32 CurrentFirstMip = RegionData->Texture2DResource->GetCurrentFirstMip();
+					if (RegionData->MipIndex >= CurrentFirstMip)
+					{
+						RHIUpdateTexture2D(
+							RegionData->Texture2DResource->GetTexture2DRHI(),
+							RegionData->MipIndex - CurrentFirstMip,
+							RegionData->Regions[RegionIndex],
+							RegionData->SrcPitch,
+							RegionData->SrcData
+							+ RegionData->Regions[RegionIndex].SrcY * RegionData->SrcPitch
+							+ RegionData->Regions[RegionIndex].SrcX * RegionData->SrcBpp
 						);
+					}
 				}
-			}
-			if (bFreeData)
-			{
-				FMemory::Free(RegionData->Regions);
-				FMemory::Free(RegionData->SrcData);
-			}
-			delete RegionData;
-		});
+				if (bFreeData)
+				{
+					FMemory::Free(RegionData->Regions);
+					FMemory::Free(RegionData->SrcData);
+				}
+				delete RegionData;
+			});
 	}
 }
